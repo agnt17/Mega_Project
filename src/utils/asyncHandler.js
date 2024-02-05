@@ -1,6 +1,6 @@
 //asyncHandler is a higher order function.
 
-import { Promise } from "mongoose";
+// import { Promise } from "mongoose";
 
 //method 1: try catch method
 /*
@@ -23,7 +23,7 @@ export { asyncHandler };
 // Method 2: Promise resolve reject method
 
 const asyncHandler = (requestHandler) => {
-  (req, res, next) => {
+  return (req, res, next) => {
     Promise.resolve(requestHandler(req, res, next)).reject((err) => next(err));
   };
 };
