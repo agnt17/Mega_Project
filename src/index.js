@@ -1,4 +1,3 @@
-
 // for 1st method
 
 // import mongoose from "mongoose";
@@ -11,7 +10,7 @@ import { app } from "./app.js";
 
 // this is the second approach
 dotenv.config({
-  path: "./env",
+  path: "./.env", // here if u use only env then it also true no problem.
 });
 
 // now the connectDB() function will connect our app to mongodb but our server is not started yet.This is done using .then and .catch functionality
